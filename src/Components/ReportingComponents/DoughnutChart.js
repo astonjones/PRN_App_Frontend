@@ -59,7 +59,7 @@ componentDidMount() {
 
 render() {
     return (
-        <div style={{width: "500px"}}>
+        <div style={{width: "100%"}}>
         <Doughnut
             data={this.state}
             options={{

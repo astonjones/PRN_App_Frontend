@@ -1,5 +1,12 @@
-.App{
+.custom-navbar a:link, a:visited, a:hover, a:active {
+  color: inherit; 
+  text-decoration: none;
+  width: 100%;
+}
 
+.sidebar{
+  padding-bottom: 5000px;
+  margin-bottom: 5000px;
 }
 
 .header-text{

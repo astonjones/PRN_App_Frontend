@@ -1,15 +1,14 @@
-import logo from './logo.svg';
-import PieChart from './PieChart';
-import DoughnutChart from './Components/DoughnutChart';
-import BarGraph from './Components/BarGraph';
-import './App.css';
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import axios from 'axios';
-import CarouselComponent from './Components/CarouselComponent';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import TopAgents from './Components/TopAgents';
-import MSBI from './Components/MSBI'
-import CustomNavbar from './Layout_Components/CustomNavbar'
+import CustomNavbar from './Components/Layout_Components/CustomNavbar'
+import Home from './Components/Home';
+import SearchLead from './Components/SearchLead';
+import CreateLead from './Components/CreateLead';
+import Reporting from './Components/Reporting';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,29 +20,16 @@ class App extends React.Component {
 
   render() {
     return(
-      <div className="App">
+      <div>
+      <Router>
         <CustomNavbar />
-        <div class="header-text">
-          <h1>Pain Relief Network Houston TX</h1>
-        </div>
-        <div>
-          <TopAgents />
-        </div>
-        <div>
-          <DoughnutChart />
-        </div>
-        <div>
-          <PieChart />
-        </div>
-        <div>
-          <BarGraph />
-        </div>
-        <div>
-          <CarouselComponent />
-        </div>
-        {/* <div>
-          <MSBI />
-        </div> */}
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/SearchLead" element={<SearchLead />} />
+            <Route path="/CreateLead" element={<CreateLead />} />
+            <Route path="/reporting" element={<Reporting />} />
+        </Routes>
+      </Router>
       </div>
     )
   }

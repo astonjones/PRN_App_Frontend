@@ -23,7 +23,7 @@ constructor(props) {
 
   render() {
     return (
-      <div style={{ width: "500px"}}>
+      <div style={{ width: "100%"}}>
         <Bar
           data={this.state}
           options={{
